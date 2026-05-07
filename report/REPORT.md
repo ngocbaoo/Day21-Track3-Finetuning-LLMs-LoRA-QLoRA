@@ -1,8 +1,10 @@
 # Lab 21 — Evaluation Report
 
 **Học viên**: Tạ Bảo Ngọc — 2A202600286
+
 **Ngày nộp**: 2026-05-07
 **Submission option**: A (lightweight)
+
 **Link Hugging Face**: https://huggingface.co/ngocbao25/qwen2.5-3b-vi-lab21-r16
 
 ## 1. Setup
@@ -28,34 +30,34 @@
 ## 4. Qualitative Comparison (5 examples)
 
 ### Example 1
-**Prompt**: Giải thích khái niệm machine learning cho người mới bắt đầu.
-**Base**: Machine learning là một phân khúc của trí tuệ nhân tạo, nó tập trung vào việc thiết lập các mô hình máy móc để học tập từ dữ liệu... (bị cắt ngang)
-**Fine-tuned (r=16)**: Machine learning là một bộ môn công nghệ máy tính dựa trên việc học tập và cải thiện các dự đoán dựa trên dữ liệu mà không có sự hướng dẫn trực tiếp từ người dùng...
-**Nhận xét**: Improved. Câu trả lời đầy đủ, mạch lạc và không bị lỗi truncate.
+- **Prompt**: Giải thích khái niệm machine learning cho người mới bắt đầu.
+- **Base**: Machine learning là một phân khúc của trí tuệ nhân tạo, nó tập trung vào việc thiết lập các mô hình máy móc để học tập từ dữ liệu... (bị cắt ngang)
+- **Fine-tuned (r=16)**: Machine learning là một bộ môn công nghệ máy tính dựa trên việc học tập và cải thiện các dự đoán dựa trên dữ liệu mà không có sự hướng dẫn trực tiếp từ người dùng...
+- **Nhận xét**: Improved. Câu trả lời đầy đủ, mạch lạc và không bị lỗi truncate.
 
 ### Example 2
-**Prompt**: Viết đoạn code Python tính số Fibonacci thứ n.
-**Base**: (Cung cấp code sử dụng đệ quy nhưng logic chưa hoàn chỉnh và bị cắt ngang ở phần quan trọng).
-**Fine-tuned (r=16)**: (Cung cấp code sử dụng vòng lặp tối ưu, có xử lý ngoại lệ cho đầu vào âm và logic hoàn toàn chính xác).
-**Nhận xét**: Improved. Code có tính ứng dụng cao hơn và tuân thủ các best practices.
+- **Prompt**: Viết đoạn code Python tính số Fibonacci thứ n.
+- **Base**: (Cung cấp code sử dụng đệ quy nhưng logic chưa hoàn chỉnh và bị cắt ngang ở phần quan trọng).
+- **Fine-tuned (r=16)**: (Cung cấp code sử dụng vòng lặp tối ưu, có xử lý ngoại lệ cho đầu vào âm và logic hoàn toàn chính xác).
+- **Nhận xét**: Improved. Code có tính ứng dụng cao hơn và tuân thủ các best practices.
 
 ### Example 3
-**Prompt**: Liệt kê 5 nguyên tắc thiết kế UI/UX.
-**Base**: 1. Thân thiện với người dùng: Mục đích của thiết kế UI/UX là cung cấp trải nghiệm... (lặp từ và giải thích dài dòng).
-**Fine-tuned (r=16)**: 1. Chuyển đổi. 2. Thích ứng. 3. Đơn giản. 4. Tương thích. 5. Thống nhất. (Mỗi mục đều có giải thích ngắn gọn).
-**Nhận xét**: Improved. Định dạng danh sách rõ ràng, dễ theo dõi.
+- **Prompt**: Liệt kê 5 nguyên tắc thiết kế UI/UX.
+- **Base**: 1. Thân thiện với người dùng: Mục đích của thiết kế UI/UX là cung cấp trải nghiệm... (lặp từ và giải thích dài dòng).
+- **Fine-tuned (r=16)**: 1. Chuyển đổi. 2. Thích ứng. 3. Đơn giản. 4. Tương thích. 5. Thống nhất. (Mỗi mục đều có giải thích ngắn gọn).
+- **Nhận xét**: Improved. Định dạng danh sách rõ ràng, dễ theo dõi.
 
 ### Example 4
-**Prompt**: Tóm tắt sự khác biệt giữa LoRA và QLoRA.
-**Base**: LoRA và QLoRA là hai phương pháp cải thiện hiệu năng của mô hình NLU (NLP)... (sai định nghĩa kỹ thuật).
-**Fine-tuned (r=16)**: LoRA là kỹ thuật regularization sử dụng các low-rank matrices. QLoRA là phiên bản cải tiến sử dụng quantization 4-bit...
-**Nhận xét**: Slightly Improved. Model đã bắt đầu nhận diện được các thuật ngữ kỹ thuật chính xác hơn, dù vẫn còn một số nhầm lẫn nhỏ về bản chất toán học.
+- **Prompt**: Tóm tắt sự khác biệt giữa LoRA và QLoRA.
+- **Base**: LoRA và QLoRA là hai phương pháp cải thiện hiệu năng của mô hình NLU (NLP)... (sai định nghĩa kỹ thuật).
+- **Fine-tuned (r=16)**: LoRA là kỹ thuật regularization sử dụng các low-rank matrices. QLoRA là phiên bản cải tiến sử dụng quantization 4-bit...
+- **Nhận xét**: Slightly Improved. Model đã bắt đầu nhận diện được các thuật ngữ kỹ thuật chính xác hơn, dù vẫn còn một số nhầm lẫn nhỏ về bản chất toán học.
 
 ### Example 5
-**Prompt**: Phân biệt prompt engineering, RAG, và fine-tuning.
-**Base**: Prompt engineering là một kỹ thuật để cải thiện hiệu suất bằng cách cung cấp câu hỏi... (bị cắt ngang giữa chừng).
-**Fine-tuned (r=16)**: Giải thích rõ ràng cả 3 khái niệm: Prompt engineering (câu lệnh), RAG (truy xuất dữ liệu ngoài) và Fine-tuning (cập nhật trọng số).
-**Nhận xét**: Improved. Cung cấp cái nhìn tổng quan và so sánh tốt giữa các kỹ thuật.
+- **Prompt**: Phân biệt prompt engineering, RAG, và fine-tuning.
+- **Base**: Prompt engineering là một kỹ thuật để cải thiện hiệu suất bằng cách cung cấp câu hỏi... (bị cắt ngang giữa chừng).
+- **Fine-tuned (r=16)**: Giải thích rõ ràng cả 3 khái niệm: Prompt engineering (câu lệnh), RAG (truy xuất dữ liệu ngoài) và Fine-tuning (cập nhật trọng số).
+- **Nhận xét**: Improved. Cung cấp cái nhìn tổng quan và so sánh tốt giữa các kỹ thuật.
 
 ## 5. Conclusion về Rank Trade-off
 
